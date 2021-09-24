@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui/screens/home/components/destination_carousel.dart';
+import 'package:flutter_travel_ui/screens/home/components/hotel_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeBody extends StatefulWidget {
@@ -69,11 +70,14 @@ class _HomeBodyState extends State<HomeBody> {
                 )
                 .toList(),
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(height: 20.0),
           DestinationCarousel(),
-          
+          SizedBox(height: 20.0),
+          HotelCarousel(),
+
         ],
       ),
     );
+    
   }
 }
