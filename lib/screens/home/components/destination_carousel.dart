@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui/constants/color_constant.dart';
 import 'package:flutter_travel_ui/models/destination_model.dart';
 import 'package:flutter_travel_ui/screens/destination/destination_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -64,7 +65,7 @@ class DestinationCarousel extends StatelessWidget {
                             width: 200.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
-                              color: Colors.white,
+                              color: ColorConstants.instance.white,
                             ),
                             child: Padding(
                               padding: EdgeInsets.all(10.0),
@@ -82,7 +83,7 @@ class DestinationCarousel extends StatelessWidget {
                                   ),
                                   Text(
                                     destination.description,
-                                    style: TextStyle(color: Colors.grey),
+                                    style: TextStyle(color: ColorConstants.instance.grey),
                                   ),
                                 ],
                               ),
@@ -91,7 +92,7 @@ class DestinationCarousel extends StatelessWidget {
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: ColorConstants.instance.white,
                             borderRadius: BorderRadius.circular(20.0),
                             boxShadow: [
                               BoxShadow(
@@ -124,7 +125,7 @@ class DestinationCarousel extends StatelessWidget {
                                     Text(
                                       destination.city,
                                       style: TextStyle(
-                                          color: Colors.white,
+                                          color: ColorConstants.instance.white,
                                           fontSize: 24.0,
                                           fontWeight: FontWeight.w600,
                                           letterSpacing: 1.2),
@@ -134,14 +135,14 @@ class DestinationCarousel extends StatelessWidget {
                                         Icon(
                                           FontAwesomeIcons.locationArrow,
                                           size: 10.0,
-                                          color: Colors.white,
+                                          color: ColorConstants.instance.white,
                                         ),
                                         SizedBox(
                                           width: 5.0,
                                         ),
                                         Text(
                                           destination.country,
-                                          style: TextStyle(color: Colors.white),
+                                          style: TextStyle(color: ColorConstants.instance.white),
                                         ),
                                       ],
                                     ),

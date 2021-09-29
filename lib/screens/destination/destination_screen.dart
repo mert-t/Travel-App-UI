@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui/constants/color_constant.dart';
+import 'package:flutter_travel_ui/constants/widget_constants.dart';
 import 'package:flutter_travel_ui/models/activity_model.dart';
 
 import 'package:flutter_travel_ui/models/destination_model.dart';
 import 'package:flutter_travel_ui/screens/home/home_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'components/icon_button.dart';
 
 class DestinationScreen extends StatefulWidget {
   final Destination destination;
@@ -87,7 +91,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     Text(
                       widget.destination.city,
                       style: TextStyle(
-                          color: Colors.white,
+                          color: ColorConstants.instance.white,
                           fontSize: 35.0,
                           fontWeight: FontWeight.w600,
                           letterSpacing: 1.2),
@@ -97,7 +101,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                         Icon(
                           FontAwesomeIcons.locationArrow,
                           size: 15.0,
-                          color: Colors.white,
+                          color: ColorConstants.instance.white,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -136,7 +140,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                       height: 170.0,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: ColorConstants.instance.white,
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Padding(
@@ -170,7 +174,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                     ),
                                     Text(
                                       "per pax",
-                                      style: TextStyle(color: Colors.grey),
+                                      style: TextStyle(color: ColorConstants.instance.grey),
                                     ),
                                   ],
                                 ),
@@ -178,12 +182,10 @@ class _DestinationScreenState extends State<DestinationScreen> {
                             ),
                             Text(
                               activity.type,
-                              style: TextStyle(color: Colors.grey),
+                              style: TextStyle(color: ColorConstants.instance.grey),
                             ),
                             _buildRatingStars(activity.rating),
-                            SizedBox(
-                              height: 10.0,
-                            ),
+                            SizedBoxConstants.instance.sizedBoxHeight,
                             Row(
                               children: [
                                 Container(
@@ -196,9 +198,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                   alignment: Alignment.center,
                                   child: Text(activity.startTimes[0]),
                                 ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
+                                SizedBoxConstants.instance.sizedBoxWidth,
                                 Container(
                                   padding: EdgeInsets.all(5.0),
                                   width: 70.0,
@@ -239,26 +239,3 @@ class _DestinationScreenState extends State<DestinationScreen> {
   }
 }
 
-class IconButt extends StatelessWidget {
-  final IconData icon;
-  final Function()? press;
-  final double size;
-  const IconButt({
-    Key? key,
-    required this.icon,
-    required this.press,
-    this.size = 30,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: press,
-      icon: Icon(
-        icon,
-      ),
-      iconSize: size,
-      color: Colors.black,
-    );
-  }
-}

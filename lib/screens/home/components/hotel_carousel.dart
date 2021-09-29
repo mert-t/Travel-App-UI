@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui/constants/color_constant.dart';
 import 'package:flutter_travel_ui/models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
@@ -54,7 +55,7 @@ class HotelCarousel extends StatelessWidget {
                           width: 200.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.white,
+                            color: ColorConstants.instance.white,
                           ),
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
@@ -73,7 +74,7 @@ class HotelCarousel extends StatelessWidget {
                                 SizedBox(height: 2.0 ,),
                                 Text(
                                   hotel.address,
-                                  style: TextStyle(color: Colors.grey),
+                                  style: TextStyle(color: ColorConstants.instance.grey),
                                 ),
                                 SizedBox(height: 2.0,),
                                 Text("\$${hotel.price} / night",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.w600),),
@@ -84,7 +85,7 @@ class HotelCarousel extends StatelessWidget {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: ColorConstants.instance.white,
                           borderRadius: BorderRadius.circular(20.0),
                           boxShadow: [
                             BoxShadow(
